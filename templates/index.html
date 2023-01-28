@@ -20,6 +20,7 @@
 
     <form action="/runcode" method="post">
       {% csrf_token %}
+      
   <div class="form-group" style="margin-left:50px;margin-right:50px;">
     <label for="codearea">Code Area</label>
     <textarea type="text" class="form-control" id="codearea" name="codearea" rows="10" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}">{{ code }}</textarea>
